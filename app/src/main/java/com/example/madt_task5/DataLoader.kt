@@ -8,7 +8,7 @@ import java.net.HttpURLConnection
 import java.net.URL
 
 class DataLoader(private val activity: MainActivity) : AsyncTask<Void, Void, List<Currency>>() {
-    override fun doInBackground(vararg params: Void?): List<Currency> {
+    public override fun doInBackground(vararg params: Void?): List<Currency> {
         val url = URL("http://api.exchangeratesapi.io/v1/latest?access_key=5e7b02ee41a973f96c4621fb32cb9284")
         val connection = url.openConnection() as HttpURLConnection
         val inputStream = connection.inputStream
